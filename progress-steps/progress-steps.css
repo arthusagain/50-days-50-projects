@@ -1,0 +1,77 @@
+.app-base{
+    display: flex;
+    height: 100vh;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.app-container{
+    text-align: center;
+}
+.progress__container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    max-width: 100%;
+    width: 350px;
+}
+.progress__bar{
+    background-color: #09f;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 0%;
+    z-index: -1;
+    transition: 0.4s ease;
+}
+
+.progress__container::before{
+    content: '';
+    background-color: #999;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    z-index: -1;
+}
+.progress__milestone{
+    border-radius: 50%;
+    background-color: white;
+    color: #999;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #999;
+    transition: 0.4s ease;
+
+}
+
+.progress__milestone--active{
+    border: 3px solid #09f;
+    color: #000;
+
+}
+
+.btn{
+    width: 33%;
+    margin:20px;
+    background-color: #09f;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    border: 0;
+}
+
+
+.btn:disabled{
+    background-color: #bbb;
+}
