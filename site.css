@@ -1,0 +1,28 @@
+body{
+    padding: 0 25%;
+    background-color: #9dd;
+    margin: 0px;
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    height: 100vh;
+    min-height: fill;
+    padding: 20px
+}
+small{
+    margin: 0 20px 20px 0;
+    align-self: flex-end;
+}
+
+article{
+    padding: 10px;
+    white-space-trim: none;
+}
+
+p{
+    margin: 10px;
+}
