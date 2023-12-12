@@ -1,0 +1,109 @@
+.return__container{
+    padding: 20px;
+    width: 100%;
+    background-color: white;
+}
+
+.split-page__container{
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    display: block;
+}
+
+.split-page__parent{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #333;
+}
+
+.split-page__split{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+.split-page__split.split-page__left{
+    left: 0;
+    background: url(ps.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 100%;
+}
+
+.split-page__split.split-page__left::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(87, 84, 236, 0.7);
+}
+.split-page__parent.split-page__hover--right .split-page__left{
+    width: 20%;
+}
+.split-page__parent.split-page__hover--left .split-page__left{
+    width: 80%;
+}
+
+.split-page__split.split-page__right{
+    right: 0;
+    background: url(xbox.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 0;
+}
+
+.split-page__split.split-page__right::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(43, 43, 43, 0.8);
+}
+
+.split-page__parent.split-page__hover--right .split-page__right{
+    width: 80%;
+}
+.split-page__parent.split-page__hover--left .split-page__right{
+    width: 20%;
+}
+
+h2{    
+    display: block;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    font-size: 4rem;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.split-page__button{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: #fff;
+    border: #fff solid 0.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 15rem;
+    padding: 1.5rem;
+}
+
+.split-page__split.split-page__right, .split-page__split.split-page__left, .split-page__split.split-page__right::before, .split-page__split.split-page__left::before {
+    transition: all 1000ms ease-in-out;
+}
